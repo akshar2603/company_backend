@@ -3,7 +3,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import connectDB from './db/db.js';  // Import your database connection function
-import careerRoutes from './routes/careerRoutes.js';  // Use default import
+import careerRoutes from './routes/careerRoutes.js'; 
+import contactRoutes from './routes/contactRoutes.js'; 
 import cors from 'cors';
 
 
@@ -24,7 +25,7 @@ connectDB(); // Connect to your MongoDB database
 
 // Use the imported router
 app.use('/api', careerRoutes);  // Mount the career routes under "/api"
-
+app.use('/api', contactRoutes) ;  
 // Serve static files from the "uploads" directory
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
