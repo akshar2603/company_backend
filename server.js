@@ -11,7 +11,7 @@ import cors from 'cors';
 const app = express();
 // Allow requests from specific origin
 app.use(cors({
-  origin: 'https://techsolution1.vercel.app', // Your frontend origin
+  origin: 'https://lakhankiyainnovation.vercel.app', // Your frontend origin
 }));
 const PORT = process.env.PORT || 5000;
 
