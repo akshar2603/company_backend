@@ -7,6 +7,6 @@ const router = express.Router();
 router.post('/career', upload.single('resume'), submitCareerApplication);
 
 // GET route for downloading resumes
-router.get('/career/download/:filename', downloadResume);
+router.get('/career/download/:publicId', downloadResume);
 
 export default router;
